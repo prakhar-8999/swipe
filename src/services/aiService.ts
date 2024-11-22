@@ -1,6 +1,7 @@
 import {GoogleGenerativeAI} from "@google/generative-ai";
+import {apiKey} from "../constants/apiKey";
 
-const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
+const genAI = new GoogleGenerativeAI(apiKey);
 
 export async function extractDataFromImage(file: File): Promise<any> {
   try {
